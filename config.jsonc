@@ -1,0 +1,507 @@
+/*
+    This file will contain all of the configuration for MonkeyGG2:
+    Games Info, Enable Proxy, Themes (coming soon)
+*/
+{
+  "games":
+      "2048": {
+      "path": "2048",
+      "aliases": [],
+      "categories": []
+    },
+    "A Dark Room": {
+      "path": "a-dark-room",
+      "aliases": [],
+      "categories": []
+    },
+    "Abandoned 2": {
+      "path": "abandoned-2",
+      "aliases": [],
+      "categories": []
+    },
+    "Ages of Conflict": {
+      "path": "ages-of-conflict",
+      "aliases": [],
+      "categories": [
+        "escape"
+      ]
+    },
+    "Aground": {
+      "path": "aground",
+      "aliases": [],
+      "categories": []
+    },
+    "Amidst The Sky": {
+      "path": "amidst-the-sky",
+      "aliases": [],
+      "categories": []
+    },
+    "Another Gentlemans Adventure": {
+      "path": "another-gentlemans-adventure",
+      "aliases": [],
+      "categories": []
+    },
+    "Awesome Tanks": {
+      "path": "awesome-tanks",
+      "aliases": [],
+      "categories": []
+    },
+    "Awesome Tanks 2": {
+      "path": "awesome-tanks-2",
+      "aliases": [],
+      "categories": []
+    },
+    "Babel Tower": {
+      "path": "babel-tower",
+      "aliases": [],
+      "categories": []
+    },
+    "Basket Random": {
+      "path": "basket-random",
+      "aliases": [],
+      "categories": []
+    },
+    "Basketball Stars": {
+      "path": "basketball-stars",
+      "aliases": [],
+      "categories": []
+    },
+    "Bit Life": {
+      "path": "bit-life",
+      "aliases": [],
+      "categories": []
+    },
+    "Boxing Random": {
+      "path": "boxing-random",
+      "aliases": [],
+      "categories": []
+    },
+    "Brawl Stars Project Laser": {
+      "path": "brawl-stars-project-laser",
+      "aliases": [],
+      "categories": []
+    },
+    "Breaklock": {
+      "path": "breaklock",
+      "aliases": [],
+      "categories": []
+    },
+    "Chrome Dino": {
+      "path": "chrome-dino",
+      "aliases": [],
+      "categories": []
+    },
+    "Clicker Heroes": {
+      "path": "clicker-heroes",
+      "aliases": [],
+      "categories": []
+    },
+    "Cookie Clicker": {
+      "path": "cookie-clicker",
+      "aliases": [],
+      "categories": []
+    },
+    "Core Ball": {
+      "path": "core-ball",
+      "aliases": [],
+      "categories": []
+    },
+    "Crossy Road": {
+      "path": "crossy-road",
+      "aliases": [],
+      "categories": []
+    },
+    "Conway's Game of Life": {
+      "path": "conways-game-of-life",
+      "aliases": [],
+      "categories": []
+    },
+    "Cut The Rope": {
+      "path": "cut-the-rope",
+      "aliases": [],
+      "categories": []
+    },
+    "Doge Miner": {
+      "path": "doge-miner",
+      "aliases": [],
+      "categories": []
+    },
+    "Doodle Jump": {
+      "path": "doodle-jump",
+      "aliases": [],
+      "categories": []
+    },
+    "Drift Boss": {
+      "path": "drift-boss",
+      "aliases": [],
+      "categories": []
+    },
+    "Drive Mad": {
+      "path": "drive-mad",
+      "aliases": [],
+      "categories": []
+    },
+    "Drive Mad S": {
+      "path": "drive-mad-s",
+      "aliases": [],
+      "categories": []
+    },
+    "Dune!": {
+      "path": "dune",
+      "aliases": [],
+      "categories": []
+    },
+    "Eggy Car": {
+      "path": "eggy-car",
+      "aliases": [],
+      "categories": []
+    },
+    "EvoWars": {
+      "path": "evowars",
+      "aliases": [],
+      "categories": []
+    },
+    "Family Feud": {
+      "path": "family-feud",
+      "aliases": [],
+      "categories": []
+    },
+    "Fireboy and Watergirl in the Forest Temple": {
+      "path": "fireboy-and-watergirl",
+      "aliases": [
+        "Fireboy and Watergirl",
+        "Fireboy and Watergirl 1"
+      ],
+      "categories": []
+    },
+    "Fireboy and Watergirl in the Light Temple": {
+      "path": "fireboy-and-watergirl-2",
+      "aliases": [
+        "Fireboy and Watergirl 2"
+      ],
+      "categories": []
+    },
+    "Fireboy and Watergirl in the Ice Temple": {
+      "path": "fireboy-and-watergirl-3",
+      "aliases": [
+        "Fireboy and Watergirl 3"
+      ],
+      "categories": []
+    },
+    "Fireboy and Watergirl in the Crystal Temple": {
+      "path": "fireboy-and-watergirl-4",
+      "aliases": [
+        "Fireboy and Watergirl 4"
+      ],
+      "categories": []
+    },
+    "Flappy Bird": {
+      "path": "flappy-bird",
+      "aliases": [],
+      "categories": []
+    },
+    "Geometry Vibes": {
+      "path": "geometry-vibes",
+      "aliases": [],
+      "categories": []
+    },
+    "Geometry Vibes Monster": {
+      "path": "geometry-vibes-monster",
+      "aliases": [],
+      "categories": []
+    },
+    "Geometry Vibes X-Ball": {
+      "path": "geometry-vibes-x-ball",
+      "aliases": [],
+      "categories": []
+    },
+    "Getaway Shootout": {
+      "path": "getaway-shootout",
+      "aliases": [],
+      "categories": []
+    },
+    "Gons io": {
+      "path": "gons-io",
+      "aliases": [],
+      "categories": []
+    },
+    "Gun Spin": {
+      "path": "gunspin",
+      "aliases": [],
+      "categories": []
+    },
+    "Hextris": {
+      "path": "hextris",
+      "aliases": [],
+      "categories": []
+    },
+    "Incremancer": {
+      "path": "incremancer",
+      "aliases": [],
+      "categories": []
+    },
+    "Idle Breakout": {
+      "path": "idle-breakout",
+      "aliases": [],
+      "categories": []
+    },
+    "Maptroid": {
+      "path": "maptroid",
+      "aliases": [],
+      "categories": []
+    },
+    "Mario": {
+      "path": "mario-game",
+      "aliases": [],
+      "categories": []
+    },
+    "Monkey Mart": {
+      "path": "monkey-mart",
+      "aliases": [],
+      "categories": []
+    },
+    "MotoX3M": {
+      "path": "motox3m",
+      "aliases": [],
+      "categories": []
+    },
+    "N-gon": {
+      "path": "n-gon",
+      "aliases": [],
+      "categories": []
+    },
+    "N Step Steve Part 2": {
+      "path": "n-step-steve-part-2",
+      "aliases": [],
+      "categories": []
+    },
+    "OvO": {
+      "path": "ovo/1.4.4",
+      "aliases": [],
+      "categories": []
+    },
+    "OvO 2": {
+      "path": "ovo/2.0.2alpha",
+      "aliases": [],
+      "categories": []
+    },
+    "Particle Clicker": {
+      "path": "particle-clicker",
+      "aliases": [],
+      "categories": []
+    },
+    "Planet Life": {
+      "path": "planet-life",
+      "aliases": [],
+      "categories": []
+    },
+    "P.craft": {
+      "path": "pcraft",
+      "aliases": [],
+      "categories": []
+    },
+    "Progress Knight Quest": {
+      "path": "progress-knight-quest",
+      "aliases": [],
+      "categories": []
+    },
+    "Progress Knight Reborn": {
+      "path": "progress-knight-reborn",
+      "aliases": [],
+      "categories": []
+    },
+    "Pull Of War": {
+      "path": "pull-of-war",
+      "aliases": [],
+      "categories": []
+    },
+    "Reach The Core": {
+      "path": "reach-the-core",
+      "aliases": [],
+      "categories": []
+    },
+    "Restless Wing Syndrome": {
+      "path": "restless-wing-syndrome",
+      "aliases": [],
+      "categories": []
+    },
+    "Retro Bowl": {
+      "path": "retro-bowl",
+      "aliases": [],
+      "categories": []
+    },
+    "Retro Bowl Old": {
+      "path": "retro-bowl-old",
+      "aliases": [],
+      "categories": []
+    },
+    "Rift Shift": {
+      "path": "rift-shift",
+      "aliases": [],
+      "categories": []
+    },
+    "Rocket League 2D": {
+      "path": "rocket-league-2d",
+      "aliases": [],
+      "categories": []
+    },
+    "Rooftop Snipers": {
+      "path": "rooftop-snipers",
+      "aliases": [],
+      "categories": []
+    },
+    "Rookie Bowman": {
+      "path": "rookie-bowman",
+      "aliases": [],
+      "categories": []
+    },
+    "Run 3": {
+      "path": "run-3",
+      "aliases": [],
+      "categories": []
+    },
+    "Run 3 Beta (may not work)": {
+      "path": "run-3-beta",
+      "aliases": [],
+      "categories": []
+    },
+    "Sandspiel": {
+      "path": "sandspiel",
+      "aliases": [],
+      "categories": []
+    },
+    "Scuba Bear": {
+      "path": "scuba-bear",
+      "aliases": [],
+      "categories": []
+    },
+    "Shadow Fight": {
+      "path": "shadow-fight",
+      "aliases": [],
+      "categories": []
+    },
+    "Slice Master": {
+      "path": "slice-master",
+      "aliases": [],
+      "categories": []
+    },
+    "Slope": {
+      "path": "slope",
+      "aliases": [],
+      "categories": []
+    },
+    "Smash Karts": {
+      "path": "smash-karts",
+      "aliases": [],
+      "categories": []
+    },
+    "Soccer Random": {
+      "path": "soccer-random",
+      "aliases": [],
+      "categories": []
+    },
+    "Stickman Hook": {
+      "path": "stickman-hook",
+      "aliases": [],
+      "categories": []
+    },
+    "Subway Surfers New York": {
+      "path": "subway-surfers-ny",
+      "aliases": [],
+      "categories": []
+    },
+    "The Final Earth": {
+      "path": "the-final-earth",
+      "aliases": [],
+      "categories": []
+    },
+    "There Is No Game": {
+      "path": "there-is-no-game",
+      "aliases": [],
+      "categories": []
+    },
+    "Time Shooter": {
+      "path": "time-shooter",
+      "aliases": [],
+      "categories": []
+    },
+    "Time Shooter 3": {
+      "path": "time-shooter-3",
+      "aliases": [],
+      "categories": []
+    },
+    "Tiny Fishing": {
+      "path": "tiny-fishing",
+      "aliases": [],
+      "categories": []
+    },
+    "Temple Run 2": {
+      "path": "temple-run-2",
+      "aliases": [],
+      "categories": []
+    },
+    "Tunnel Rush": {
+      "path": "tunnel-rush",
+      "aliases": [],
+      "categories": []
+    },
+    "Two Ball 3d": {
+      "path": "two-ball-3d",
+      "aliases": [],
+      "categories": []
+    },
+    "Vex 3": {
+      "path": "vex-3",
+      "aliases": [],
+      "categories": []
+    },
+    "Vex 4": {
+      "path": "vex-4",
+      "aliases": [],
+      "categories": []
+    },
+    "Vex 5": {
+      "path": "vex-5",
+      "aliases": [],
+      "categories": []
+    },
+    "Vex 6": {
+      "path": "vex-6",
+      "aliases": [],
+      "categories": []
+    },
+    "Vex 7": {
+      "path": "vex-7",
+      "aliases": [],
+      "categories": []
+    },
+    "Volley Random": {
+      "path": "volley-random",
+      "aliases": [],
+      "categories": []
+    },
+    "Web OSU": {
+      "path": "web-osu",
+      "aliases": [],
+      "categories": []
+    },
+    "X Trench Run": {
+      "path": "x-trench-run",
+      "aliases": [],
+      "categories": []
+    },
+    "Yohoho": {
+      "path": "yohoho",
+      "aliases": [],
+      "categories": []
+    }
+
+  "themes": {
+    // coming soon
+  },
+  "config": {
+    "proxy": true, // proxy only works when self-hosted
+    "proxyPath": "https://monkey.nordparrot.ro" // absolute or relative path to proxy; proxy must be set to true for this setting to have any effect.
+    // if you are using VioletGG2, all you need to do set proxy to "/proxy.html"
+  }
+}
