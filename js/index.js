@@ -740,9 +740,9 @@ function randomGame() {
 }
 
 const preferencesDefaults = {
-    cloak: true,
+    cloak: false,
     cloakUrl: 'https://classroom.google.com',
-    mask: true,
+    mask: false,
     maskTitle: 'Home',
     maskIconUrl: 'https://ssl.gstatic.com/classroom/ic_product_classroom_32.png',
     background: true,
