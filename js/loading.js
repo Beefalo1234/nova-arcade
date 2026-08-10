@@ -103,7 +103,10 @@ $('#gamesList li').on('click', function () {
     currentMenu = $('#page-loader');
 });
 
-$(window).on('load', () => {
+let revealed = false;
+function reveal() {
+    if (revealed) return;
+    revealed = true;
     $('.track').attr('stroke', 'url(#grad2)');
     $('.worm1').hide();
     $('.worm2').hide();
@@ -123,7 +126,12 @@ $(window).on('load', () => {
             }, 100);
         },
     });
-});
+}
+
+$(window).on('load', reveal);
+// Safety net: never trap the user on the loading screen, no matter what
+// resource stalls the window load event (blocked CDN, hung font, etc).
+setTimeout(reveal, 6000);
 
 jQuery.fn.extend({
     showModal: function () {
