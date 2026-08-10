@@ -494,7 +494,6 @@
   },
   "themes": {},
   "config": {
-    "proxy": true,
-    "proxyPath": "https://monkey.nordparrot.ro"
+    "proxy": false
   }
 }
