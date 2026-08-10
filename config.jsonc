@@ -490,6 +490,199 @@
       "path": "yohoho",
       "aliases": [],
       "categories": []
+    },
+    "15 Puzzle": {
+      "path": "15-puzzle",
+      "aliases": [],
+      "categories": []
+    },
+    "8 Ball Pool": {
+      "path": "8-ball-pool",
+      "aliases": [],
+      "categories": []
+    },
+    "Asteroids": {
+      "path": "asteroids",
+      "aliases": [],
+      "categories": []
+    },
+    "Blackjack": {
+      "path": "blackjack",
+      "aliases": [],
+      "categories": []
+    },
+    "Breakout": {
+      "path": "breakout",
+      "aliases": [],
+      "categories": []
+    },
+    "Brick Breaker": {
+      "path": "brick-breaker",
+      "aliases": [],
+      "categories": []
+    },
+    "Bubble Shooter": {
+      "path": "bubble-shooter",
+      "aliases": [],
+      "categories": []
+    },
+    "Bubble Pop Adventure": {
+      "path": "bubble-pop-adventure",
+      "aliases": [],
+      "categories": []
+    },
+    "Connect Four Game": {
+      "path": "connect-four-game",
+      "aliases": [],
+      "categories": []
+    },
+    "Cosmic Defender": {
+      "path": "cosmic-defender",
+      "aliases": [],
+      "categories": []
+    },
+    "Endless Runner": {
+      "path": "endless-runner",
+      "aliases": [],
+      "categories": []
+    },
+    "Fruit Slicer": {
+      "path": "fruit-slicer",
+      "aliases": [],
+      "categories": []
+    },
+    "Hangman": {
+      "path": "hangman",
+      "aliases": [],
+      "categories": []
+    },
+    "Helix Fall": {
+      "path": "helix-fall",
+      "aliases": [],
+      "categories": []
+    },
+    "Lava Jumper": {
+      "path": "lava-jumper",
+      "aliases": [],
+      "categories": []
+    },
+    "Maze Runner": {
+      "path": "maze-runner",
+      "aliases": [],
+      "categories": []
+    },
+    "Minesweeper": {
+      "path": "minesweeper",
+      "aliases": [],
+      "categories": []
+    },
+    "Neon Orbit": {
+      "path": "neon-orbit",
+      "aliases": [],
+      "categories": []
+    },
+    "Ocean Cleaner": {
+      "path": "ocean-cleaner",
+      "aliases": [],
+      "categories": []
+    },
+    "Pixel Pirate": {
+      "path": "pixel-pirate",
+      "aliases": [],
+      "categories": []
+    },
+    "Pinball Wizard": {
+      "path": "pinball-wizard",
+      "aliases": [],
+      "categories": []
+    },
+    "Pong": {
+      "path": "pong",
+      "aliases": [],
+      "categories": []
+    },
+    "Reaction Timer": {
+      "path": "reaction-timer",
+      "aliases": [],
+      "categories": []
+    },
+    "Rock Paper Scissors": {
+      "path": "rock-paper-scissors",
+      "aliases": [],
+      "categories": []
+    },
+    "Simon_Game": {
+      "path": "simon_game",
+      "aliases": [],
+      "categories": []
+    },
+    "Sliding Puzzle": {
+      "path": "sliding-puzzle",
+      "aliases": [],
+      "categories": []
+    },
+    "Space_Invader": {
+      "path": "space_invader",
+      "aliases": [],
+      "categories": []
+    },
+    "Speed Match": {
+      "path": "speed-match",
+      "aliases": [],
+      "categories": []
+    },
+    "Stack Tower": {
+      "path": "stack-tower",
+      "aliases": [],
+      "categories": []
+    },
+    "Sudoku": {
+      "path": "sudoku",
+      "aliases": [],
+      "categories": []
+    },
+    "Tictactoe": {
+      "path": "tictactoe",
+      "aliases": [],
+      "categories": []
+    },
+    "Tower Defense": {
+      "path": "tower-defense",
+      "aliases": [],
+      "categories": []
+    },
+    "Typing Test": {
+      "path": "typing-test",
+      "aliases": [],
+      "categories": []
+    },
+    "Ufo Escape": {
+      "path": "ufo-escape",
+      "aliases": [],
+      "categories": []
+    },
+    "Whack A Mole": {
+      "path": "whack-a-mole",
+      "aliases": [],
+      "categories": []
+    },
+    "Word Scramble": {
+      "path": "word-scramble",
+      "aliases": [],
+      "categories": []
+    },
+    "Zombie Tapper": {
+      "path": "zombie-tapper",
+      "aliases": [],
+      "categories": []
+    },
+    "Neon Arcade": {
+      "path": "neon-arcade",
+      "aliases": [
+        "arcade",
+        "neon"
+      ],
+      "categories": []
     }
   },
   "themes": {},

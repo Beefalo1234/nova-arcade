@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEON ARCADE — 6 Free Browser Games</title>
+<meta name="description" content="Snake, Tetris, 2048, Pong, Breakout, Memory — free browser games. High scores saved locally.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="scanlines"></div>
+<header class="topbar">
+  <div class="logo">NEON<span>ARCADE</span></div>
+  <div class="topstat">BEST: <span id="globalBest">0</span></div>
+</header>
+
+<main id="menu">
+  <h1 class="title">SELECT GAME</h1>
+  <p class="sub">Press <b>P</b> to pause · <b>R</b> to restart · high scores saved locally</p>
+  <div class="grid" id="menuGrid"></div>
+</main>
+
+<div id="gameArea" class="hidden">
+  <div class="gamebar">
+    <button class="btn" id="backBtn">← MENU</button>
+    <div class="gtitle" id="gameTitle"></div>
+    <div class="gscore">SCORE <span id="scoreVal">0</span> · BEST <span id="bestVal">0</span></div>
+  </div>
+  <div class="stage">
+    <canvas id="gameCanvas" width="640" height="480"></canvas>
+    <div id="overlay" class="overlay hidden"><div class="obox"><div id="overlayTitle">PAUSED</div><div id="overlayMsg">Press P to resume</div></div></div>
+  </div>
+  <div class="touchbar hidden" id="touchbar">
+    <button class="tbtn" data-t="L">◀</button>
+    <div class="tmid"><button class="tbtn" data-t="U">▲</button><button class="tbtn" data-t="D">▼</button></div>
+    <button class="tbtn" data-t="R">▶</button>
+  </div>
+</div>
+
+<footer>NEON ARCADE · made with vanilla JS · no ads, no trackers</footer>
+<script src="js/arcade.js"></script>
+<script src="js/snake.js"></script>
+<script src="js/tetris.js"></script>
+<script src="js/game2048.js"></script>
+<script src="js/pong.js"></script>
+<script src="js/breakout.js"></script>
+<script src="js/memory.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
