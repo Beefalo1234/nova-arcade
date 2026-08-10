@@ -26,3 +26,12 @@
     }
   });
 })();
+
+// floating slot close button
+(function(){
+  const closeBtn = document.getElementById("adClose");
+  const floatSlot = document.getElementById("ad-float");
+  if (closeBtn && floatSlot) {
+    closeBtn.addEventListener("click", () => { floatSlot.style.display = "none"; });
+  }
+})();

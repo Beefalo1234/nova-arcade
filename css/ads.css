@@ -29,3 +29,15 @@
 }
 #ad-top { margin-top: 14px; }
 #ad-mid { margin: 18px auto; }
+
+/* floating corner slot */
+.ad-float{
+  position:fixed;bottom:14px;right:14px;width:300px;max-width:88vw;min-height:120px;
+  margin:0;z-index:94;box-shadow:0 10px 34px rgba(0,0,0,.55);border-radius:12px;
+}
+.ad-float .ad-close{
+  position:absolute;top:-11px;right:-11px;width:26px;height:26px;border-radius:50%;
+  border:1px solid rgba(0,240,255,.4);background:#0e0e1c;color:#00f0ff;font-size:15px;
+  line-height:1;cursor:pointer;z-index:2;
+}
+.ad-float .ad-close:hover{border-color:#ff2ec4;color:#ff2ec4}
