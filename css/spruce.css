@@ -1,0 +1,82 @@
+/* ═══════ NOVA ARCADE spruce (2026-08-14) — gold accents, hero line ═══════
+   Additive polish only. Cyan stays primary; gold is the secondary accent
+   (borrowed from LeadSetter-AI). Nothing here touches ads.css or game logic. */
+
+.nova-tagline {
+  font-family: var(--font-family, 'Assistant', sans-serif);
+  font-size: 1.05rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #ffd23d;
+  margin: 0.5rem auto 1.2rem;
+  text-shadow: 0 0 14px rgba(255, 210, 61, 0.45);
+  max-width: 90vw;
+}
+
+/* gold underline glow under the title */
+#title::after {
+  content: "";
+  display: block;
+  width: 92px;
+  height: 3px;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+  background: linear-gradient(90deg, transparent, #ffd23d, transparent);
+  box-shadow: 0 0 16px rgba(255, 210, 61, 0.65);
+}
+
+/* "NEW" badge utility (add class="gold-badge" to any element) */
+.gold-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #14131a;
+  background: linear-gradient(135deg, #ffd23d, #ffb900);
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  box-shadow: 0 0 12px rgba(255, 210, 61, 0.5);
+}
+
+/* gold ring on the primary nav cards at hover (shadow/transform untouched) */
+.homepage .card:hover {
+  border-color: rgba(255, 210, 61, 0.55);
+}
+
+/* game list thumbnails */
+.card-collage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.card-collage img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+#gamesList li .thumb {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+}
+#gamesList li .gname {
+  font-weight: 600;
+}
+#gamesList li {
+  display: flex;
+  flex-direction: column;
+}
+#gamesList li .star {
+  order: -1;
+  align-self: flex-end;
+}

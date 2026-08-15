@@ -26,10 +26,11 @@ let config = json['config'];
 
 let gamesList = $('#gamesList');
 for (game in games) {
+    const gpath = games[game]['path'].replace(/\//g, '_');
     gamesList.append(
         `<li url="games/${games[game]['path']}" ${
             games[game]['aliases'] ? 'aliases="' + games[game]['aliases'].join(',') + '"' : ''
-        }>${game} <span class="star">★</span> </li>`,
+        }><img class="thumb" src="games/thumbnails/${gpath}.jpg" alt="${game}"> <span class="gname">${game}</span> <span class="star">★</span> </li>`,
     );
 }
 
