@@ -115,14 +115,21 @@ def gen(name, path):
 
     # title (bold, wrapped, shadowed)
     try:
-        f_t = ImageFont.truetype(F_BOLD, 30)
+        f_t = ImageFont.truetype(F_BOLD, 34)
     except Exception:
         f_t = ImageFont.load_default()
     lines = wrap(d, name.upper(), f_t, W - 24)
-    ty = 150 - ((len(lines) - 1) * 16)
+    ty = 152 - ((len(lines) - 1) * 17)
     for i, ln in enumerate(lines):
-        d.text((W // 2 + 1, ty + 1 + i * 16), ln, font=f_t, anchor="mm", fill=(0, 0, 0))
-        d.text((W // 2, ty + i * 16), ln, font=f_t, anchor="mm", fill=(255, 255, 255))
+        d.text((W // 2 + 1, ty + 1 + i * 17), ln, font=f_t, anchor="mm", fill=(0, 0, 0))
+        d.text((W // 2, ty + i * 17), ln, font=f_t, anchor="mm", fill=(255, 255, 255))
+
+    # saturation boost (research rule: bright pop on dark)
+    hsv = img.convert("HSV")
+    h, s, v = hsv.split()
+    s = s.point(lambda x: min(255, int(x * 1.3)))
+    img = Image.merge("HSV", (h, s, v)).convert("RGB")
+    d = ImageDraw.Draw(img)
 
     # play badge (white circle + triangle, top-right)
     cx, cy, r = W - 34, 34, 15

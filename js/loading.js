@@ -28,7 +28,7 @@ let gamesList = $('#gamesList');
 for (game in games) {
     const gpath = games[game]['path'].replace(/\//g, '_');
     gamesList.append(
-        `<li url="games/${games[game]['path']}" ${
+        `<li url="games/${games[game]['path']}" data-name="${game}" ${
             games[game]['aliases'] ? 'aliases="' + games[game]['aliases'].join(',') + '"' : ''
         }><img class="thumb" src="games/thumbnails/${gpath}.jpg" alt="${game}"> <span class="gname">${game}</span> <span class="star">★</span> </li>`,
     );

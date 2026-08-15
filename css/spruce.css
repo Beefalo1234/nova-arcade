@@ -75,6 +75,48 @@
 #gamesList li {
   display: flex;
   flex-direction: column;
+  position: relative;
+  border-radius: 12px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  cursor: pointer;
+}
+#gamesList li:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 18px rgba(0, 240, 255, 0.35);
+}
+#gamesList li .thumb {
+  transition: filter 0.18s ease, border-color 0.18s ease;
+}
+#gamesList li:hover .thumb {
+  filter: brightness(1.12) saturate(1.15);
+  border-color: rgba(0, 240, 255, 0.55);
+}
+/* title overlay on hover (research rule: scrim + title at tile bottom) */
+#gamesList li::after {
+  content: attr(data-name);
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 14px 10px 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-align: left;
+  color: #fff;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+  border-radius: 0 0 12px 12px;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+#gamesList li:hover::after {
+  opacity: 1;
+  transform: none;
+}
+/* a11y */
+#gamesList li:focus-visible {
+  outline: 2px solid rgba(0, 240, 255, 0.8);
+  outline-offset: 2px;
 }
 #gamesList li .star {
   order: -1;
