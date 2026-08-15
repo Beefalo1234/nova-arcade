@@ -122,3 +122,151 @@
   order: -1;
   align-self: flex-end;
 }
+
+/* ═══ RESTRUCTURE v2 (2026-08-15): floating search + view toggles ═══ */
+
+/* floating search bar (sticks to top of games panel) */
+.games .searchbar {
+  position: sticky;
+  top: 10px;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  border-radius: 16px;
+  background: rgba(12, 16, 32, 0.82);
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 18px rgba(0, 240, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.games .searchbar input#search {
+  flex: 1;
+  min-width: 160px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  color: #eef2ff;
+  padding: 10px 14px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.games .searchbar input#search:focus {
+  border-color: rgba(0, 240, 255, 0.7);
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.25);
+}
+.games .searchbar select,
+.games .searchbar .randgame {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  color: #eef2ff;
+  padding: 10px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.games .searchbar .randgame:hover {
+  border-color: rgba(255, 210, 61, 0.6);
+  color: #ffd23d;
+}
+.toggles {
+  display: inline-flex;
+  gap: 6px;
+  margin-left: auto;
+}
+.tog {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  color: #9aa7c7;
+  padding: 9px 12px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+.tog:hover { color: #eef2ff; border-color: rgba(0, 240, 255, 0.5); }
+.tog.active {
+  color: #14131a;
+  background: linear-gradient(135deg, #ffd23d, #f0a500);
+  border-color: transparent;
+  box-shadow: 0 0 12px rgba(255, 210, 61, 0.4);
+}
+
+/* grid view (default): image-first cards */
+#gamesList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 14px;
+  padding: 0;
+  list-style: none;
+}
+#gamesList li {
+  background: #121a33;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 10px;
+  overflow: hidden;
+}
+#gamesList li .thumb {
+  aspect-ratio: 16 / 9;
+  margin-bottom: 8px;
+}
+#gamesList li .star {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  order: 0;
+  align-self: auto;
+  z-index: 3;
+  font-size: 1.1rem;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+}
+
+/* list mode: compact rows */
+#gamesList.list-mode {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#gamesList.list-mode li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+}
+#gamesList.list-mode .thumb {
+  width: 110px;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  margin: 0;
+  flex-shrink: 0;
+}
+#gamesList.list-mode .gname { font-size: 0.95rem; }
+#gamesList.list-mode .star { position: static; order: 3; margin-left: auto; }
+#gamesList.list-mode li::after { display: none; }
+
+/* thumbnails off */
+#gamesList.no-thumbs .thumb { display: none; }
+#gamesList.no-thumbs li { min-height: 52px; justify-content: center; }
+#gamesList.no-thumbs .gname { font-size: 1.05rem; }
+
+/* floaty mode: LeadSetter floaties vibe — slow bob + sway, glassy */
+#gamesList.floaty-mode li {
+  animation: novaFloat 7s ease-in-out infinite;
+  background: rgba(18, 26, 51, 0.72);
+  backdrop-filter: blur(6px);
+  border-color: rgba(255, 210, 61, 0.18);
+}
+#gamesList.floaty-mode li:nth-child(3n+1) { animation-delay: 0s; }
+#gamesList.floaty-mode li:nth-child(3n+2) { animation-delay: 1.2s; }
+#gamesList.floaty-mode li:nth-child(3n)   { animation-delay: 2.4s; }
+@keyframes novaFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50%      { transform: translateY(-12px) rotate(1.2deg); }
+}
