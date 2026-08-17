@@ -44,7 +44,12 @@
   border-color: rgba(255, 210, 61, 0.55);
 }
 
-/* game list thumbnails */
+
+/* ═══════════════════════════════════════════════════════════════
+   GAME LIST THUMBNAILS
+   FIXED: prevents thumbnails from collapsing into flat strips
+   ═══════════════════════════════════════════════════════════════ */
+
 .card-collage {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -55,89 +60,193 @@
   flex: 0 0 100%;
   align-self: stretch;
 }
+
 .card-collage img {
   display: block;
   width: 100%;
   min-width: 0;
   height: 54px;
+  min-height: 54px;
+  max-height: 54px;
   object-fit: cover;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
-@media (max-width: 640px) {
-  .card-collage img {
-    height: 22px;
-  }
-}
-#gamesList li .thumb {
-  display: block;
-  width: 100%;
-  height: 110px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
-}
-/* mobile: hard dimensions, no auto */
-@media (max-width: 640px) {
-  #gamesList li .thumb {
-    height: 90px;
-  }
-}
-#gamesList li .gname {
-  font-weight: 600;
-}
+
+
+/*
+ * GAME CARDS
+ *
+ * The explicit height/min-height/flex values below prevent inherited
+ * flex/grid rules elsewhere in the site from squeezing the thumbnail.
+ */
 #gamesList li {
   display: flex;
   flex-direction: column;
   position: relative;
+
+  height: auto;
+  min-height: 0;
+  min-width: 0;
+  flex: none;
+
+  box-sizing: border-box;
+
   border-radius: 12px;
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
   cursor: pointer;
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
 }
+
+
+/*
+ * THUMBNAIL
+ *
+ * Keep these dimensions explicit rather than relying only on
+ * aspect-ratio. This prevents the "flat strip" bug.
+ */
+#gamesList li .thumb {
+  display: block !important;
+
+  width: 100% !important;
+
+  height: 110px !important;
+  min-height: 110px !important;
+  max-height: 110px !important;
+
+  flex: 0 0 110px !important;
+  flex-shrink: 0 !important;
+
+  box-sizing: border-box;
+
+  object-fit: cover;
+  object-position: center;
+
+  margin: 0 0 8px 0 !important;
+  padding: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+
+  background:
+    linear-gradient(135deg, #18233f, #090e1e);
+
+  box-shadow:
+    0 4px 14px rgba(0, 0, 0, 0.45);
+
+  overflow: hidden;
+
+  transform: translateZ(0);
+  backface-visibility: hidden;
+
+  transition:
+    filter 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.18s ease;
+}
+
+
+/*
+ * Optional thumbnail wrappers.
+ * These do nothing unless the HTML uses one of these classes,
+ * but protect against the same collapse problem if it does.
+ */
+#gamesList li .thumb-wrap,
+#gamesList li .thumbnail,
+#gamesList li .game-thumb {
+  display: block;
+  width: 100%;
+  height: 110px;
+  min-height: 110px;
+  flex: 0 0 110px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#gamesList li .thumb-wrap img,
+#gamesList li .thumbnail img,
+#gamesList li .game-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+
+/* game name */
+#gamesList li .gname {
+  font-weight: 600;
+}
+
+
+/* hover */
 #gamesList li:hover {
   transform: scale(1.04);
   box-shadow: 0 0 18px rgba(0, 240, 255, 0.35);
 }
-#gamesList li .thumb {
-  transition: filter 0.18s ease, border-color 0.18s ease;
-}
+
 #gamesList li:hover .thumb {
   filter: brightness(1.12) saturate(1.15);
   border-color: rgba(0, 240, 255, 0.55);
+  transform: scale(1.015);
 }
+
+
 /* title overlay on hover (research rule: scrim + title at tile bottom) */
 #gamesList li::after {
   content: attr(data-name);
   position: absolute;
-  left: 0; right: 0; bottom: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
   padding: 14px 10px 8px;
+
   font-weight: 700;
   font-size: 0.95rem;
   text-align: left;
+
   color: #fff;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+
+  background:
+    linear-gradient(
+      transparent,
+      rgba(0, 0, 0, 0.85)
+    );
+
   border-radius: 0 0 12px 12px;
+
   opacity: 0;
   transform: translateY(4px);
-  transition: opacity 0.18s ease, transform 0.18s ease;
+
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease;
+
   pointer-events: none;
   z-index: 2;
 }
+
 #gamesList li:hover::after {
   opacity: 1;
   transform: none;
 }
+
+
 /* a11y */
 #gamesList li:focus-visible {
   outline: 2px solid rgba(0, 240, 255, 0.8);
   outline-offset: 2px;
 }
+
 #gamesList li .star {
   order: -1;
   align-self: flex-end;
 }
+
 
 /* ═══ RESTRUCTURE v2 (2026-08-15): floating search + view toggles ═══ */
 
@@ -159,6 +268,7 @@
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
+
 .games .searchbar input#search {
   flex: 1;
   min-width: 160px;
@@ -171,10 +281,12 @@
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
+
 .games .searchbar input#search:focus {
   border-color: rgba(0, 240, 255, 0.7);
   box-shadow: 0 0 12px rgba(0, 240, 255, 0.25);
 }
+
 .games .searchbar select,
 .games .searchbar .randgame {
   background: rgba(255, 255, 255, 0.07);
@@ -185,15 +297,18 @@
   font-size: 0.9rem;
   cursor: pointer;
 }
+
 .games .searchbar .randgame:hover {
   border-color: rgba(255, 210, 61, 0.6);
   color: #ffd23d;
 }
+
 .toggles {
   display: inline-flex;
   gap: 6px;
   margin-left: auto;
 }
+
 .tog {
   background: rgba(255, 255, 255, 0.07);
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -205,7 +320,12 @@
   cursor: pointer;
   transition: all 0.18s ease;
 }
-.tog:hover { color: #eef2ff; border-color: rgba(0, 240, 255, 0.5); }
+
+.tog:hover {
+  color: #eef2ff;
+  border-color: rgba(0, 240, 255, 0.5);
+}
+
 .tog.active {
   color: #14131a;
   background: linear-gradient(135deg, #ffd23d, #f0a500);
@@ -213,7 +333,11 @@
   box-shadow: 0 0 12px rgba(255, 210, 61, 0.4);
 }
 
-/* grid view (default): image-first cards */
+
+/* ═══════════════════════════════════════════════════════════════
+   GRID VIEW
+   ═══════════════════════════════════════════════════════════════ */
+
 #gamesList {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
@@ -221,6 +345,7 @@
   padding: 0;
   list-style: none;
 }
+
 #gamesList li {
   background: #121a33;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -228,10 +353,23 @@
   padding: 10px;
   overflow: hidden;
 }
+
+/*
+ * Keep the original 16:9 intent while using explicit dimensions
+ * so the browser cannot collapse the image.
+ */
 #gamesList li .thumb {
   aspect-ratio: 16 / 9;
-  margin-bottom: 8px;
+
+  height: 110px !important;
+  min-height: 110px !important;
+  max-height: 110px !important;
+
+  flex: 0 0 110px !important;
 }
+
+
+/* star */
 #gamesList li .star {
   position: absolute;
   top: 8px;
@@ -243,12 +381,17 @@
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
 }
 
-/* list mode: compact rows */
+
+/* ═══════════════════════════════════════════════════════════════
+   LIST MODE: COMPACT ROWS
+   ═══════════════════════════════════════════════════════════════ */
+
 #gamesList.list-mode {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
+
 #gamesList.list-mode li {
   display: flex;
   flex-direction: row;
@@ -256,32 +399,106 @@
   gap: 12px;
   padding: 8px 12px;
 }
+
 #gamesList.list-mode .thumb {
-  width: 110px;
-  height: 62px;
-  margin: 0;
-  flex-shrink: 0;
+  width: 110px !important;
+  min-width: 110px !important;
+  max-width: 110px !important;
+
+  height: 62px !important;
+  min-height: 62px !important;
+  max-height: 62px !important;
+
+  margin: 0 !important;
+
+  flex: 0 0 110px !important;
+  flex-shrink: 0 !important;
 }
-#gamesList.list-mode .gname { font-size: 0.95rem; }
-#gamesList.list-mode .star { position: static; order: 3; margin-left: auto; }
-#gamesList.list-mode li::after { display: none; }
 
-/* thumbnails off */
-#gamesList.no-thumbs .thumb { display: none; }
-#gamesList.no-thumbs li { min-height: 52px; justify-content: center; }
-#gamesList.no-thumbs .gname { font-size: 1.05rem; }
+#gamesList.list-mode .gname {
+  font-size: 0.95rem;
+}
 
-/* floaty mode: LeadSetter floaties vibe — slow bob + sway, glassy */
+#gamesList.list-mode .star {
+  position: static;
+  order: 3;
+  margin-left: auto;
+}
+
+#gamesList.list-mode li::after {
+  display: none;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   THUMBNAILS OFF
+   ═══════════════════════════════════════════════════════════════ */
+
+#gamesList.no-thumbs .thumb {
+  display: none !important;
+}
+
+#gamesList.no-thumbs li {
+  min-height: 52px;
+  justify-content: center;
+}
+
+#gamesList.no-thumbs .gname {
+  font-size: 1.05rem;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   FLOATY MODE: LeadSetter floaties vibe — slow bob + sway, glassy
+   ═══════════════════════════════════════════════════════════════ */
+
 #gamesList.floaty-mode li {
   animation: novaFloat 7s ease-in-out infinite;
   background: rgba(18, 26, 51, 0.72);
   backdrop-filter: blur(6px);
   border-color: rgba(255, 210, 61, 0.18);
 }
-#gamesList.floaty-mode li:nth-child(3n+1) { animation-delay: 0s; }
-#gamesList.floaty-mode li:nth-child(3n+2) { animation-delay: 1.2s; }
-#gamesList.floaty-mode li:nth-child(3n)   { animation-delay: 2.4s; }
+
+#gamesList.floaty-mode li:nth-child(3n+1) {
+  animation-delay: 0s;
+}
+
+#gamesList.floaty-mode li:nth-child(3n+2) {
+  animation-delay: 1.2s;
+}
+
+#gamesList.floaty-mode li:nth-child(3n) {
+  animation-delay: 2.4s;
+}
+
 @keyframes novaFloat {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50%      { transform: translateY(-12px) rotate(1.2deg); }
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(1.2deg);
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   MOBILE
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 640px) {
+  .card-collage img {
+    height: 22px;
+    min-height: 22px;
+    max-height: 22px;
+  }
+
+  #gamesList li .thumb {
+    height: 90px !important;
+    min-height: 90px !important;
+    max-height: 90px !important;
+
+    flex: 0 0 90px !important;
+    flex-shrink: 0 !important;
+  }
 }
