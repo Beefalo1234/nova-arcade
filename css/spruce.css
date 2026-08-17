@@ -50,9 +50,16 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 6px;
   margin-bottom: 12px;
+  width: 100%;
+  min-width: 0;
+  flex: 0 0 100%;
+  align-self: stretch;
 }
 .card-collage img {
+  display: block;
   width: 100%;
+  min-width: 0;
+  height: auto;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 8px;

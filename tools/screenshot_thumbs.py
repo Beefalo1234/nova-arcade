@@ -33,6 +33,14 @@ def is_blank(pil_img):
     return a.std() < 12.0
 
 
+def pop(pil_img):
+    """Contrast + saturation punch so plain screens still pop at tile size."""
+    from PIL import ImageEnhance
+    im = ImageEnhance.Contrast(pil_img).enhance(1.15)
+    im = ImageEnhance.Color(im).enhance(1.25)
+    return im
+
+
 def main():
     src = (BASE / "js" / "config.js").read_text(encoding="utf-8")
     games = json.loads(src[src.index("{") : src.rindex("}") + 1])["games"]
@@ -47,7 +55,13 @@ def main():
             try:
                 pg = ctx.new_page()
                 pg.goto(url, timeout=20000, wait_until="domcontentloaded")
-                pg.wait_for_timeout(5500)
+                pg.wait_for_timeout(5000)
+                # click center to dismiss "click to start" screens
+                try:
+                    pg.mouse.click(320, 180)
+                    pg.wait_for_timeout(3500)
+                except Exception:
+                    pass
                 shot = pg.screenshot(type="png")
                 pg.close()
                 im = Image.open(io.BytesIO(shot)).convert("RGB")
@@ -55,12 +69,13 @@ def main():
                 if is_blank(im):
                     blank += 1
                     continue  # keep existing thumb
-                im.save(dest, quality=85)
+                im = pop(im)
+                im.save(dest, quality=88)
                 done += 1
             except Exception as e:
                 print(f"[{i}/{len(games)}] {name}: FAIL {str(e)[:60]}")
-                if i % 20 == 0:
-                    print(f"... {i}/{len(games)} (ok={done}, blank-skip={blank})")
+            if i % 25 == 0:
+                print(f"... {i}/{len(games)} (ok={done}, blank-skip={blank})")
         b.close()
     print(f"done: {done} real screenshots, {blank} blank (kept old thumb)")
 
