@@ -59,22 +59,31 @@
   display: block;
   width: 100%;
   min-width: 0;
-  height: auto;
-  aspect-ratio: 16 / 9;
+  height: 54px;
   object-fit: cover;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
+@media (max-width: 640px) {
+  .card-collage img {
+    height: 22px;
+  }
+}
 #gamesList li .thumb {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
+  height: 110px;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 8px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+}
+/* mobile: hard dimensions, no auto */
+@media (max-width: 640px) {
+  #gamesList li .thumb {
+    height: 90px;
+  }
 }
 #gamesList li .gname {
   font-weight: 600;
@@ -249,8 +258,7 @@
 }
 #gamesList.list-mode .thumb {
   width: 110px;
-  height: auto;
-  aspect-ratio: 16 / 9;
+  height: 62px;
   margin: 0;
   flex-shrink: 0;
 }
