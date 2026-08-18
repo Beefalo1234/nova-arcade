@@ -30,7 +30,7 @@ for (game in games) {
     gamesList.append(
         `<li url="games/${games[game]['path']}" data-name="${game}" ${
             games[game]['aliases'] ? 'aliases="' + games[game]['aliases'].join(',') + '"' : ''
-        }><img class="thumb" width="198" height="120" src="games/thumbnails/${gpath}.jpg" alt="${game}"> <span class="gname">${game}</span> <span class="star">★</span> </li>`,
+        }><img class="thumb" width="198" height="120" src="games/thumbnails/${gpath}.jpg?v=2" alt="${game}"> <span class="gname">${game}</span> <span class="star">★</span> </li>`,
     );
 }
 
