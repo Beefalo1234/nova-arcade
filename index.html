@@ -19,6 +19,46 @@
   <link href="css/loading.css" rel="stylesheet" type="text/css" />
   <link href="css/style.css" rel="stylesheet" type="text/css" />
   <link href="css/spruce.css?v=5" rel="stylesheet" type="text/css" />
+  <style>
+    /* INLINE CRITICAL SIZES — shipped inside the HTML so no CSS cache can
+       ever stale them. Rectangles, hard pixels, cannot collapse to lines. */
+    #gamesList li .thumb {
+      display: block !important;
+      width: 100% !important;
+      height: 120px !important;
+      min-height: 120px !important;
+      max-height: 120px !important;
+      flex: 0 0 120px !important;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 10px;
+      margin: 0 0 8px 0 !important;
+    }
+    @media (max-width: 640px) {
+      #gamesList li .thumb {
+        height: 100px !important;
+        min-height: 100px !important;
+        max-height: 100px !important;
+        flex-basis: 100px !important;
+      }
+    }
+    .card-collage img {
+      display: block !important;
+      width: 100% !important;
+      height: 80px !important;
+      min-height: 80px !important;
+      max-height: 80px !important;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    @media (max-width: 640px) {
+      .card-collage img {
+        height: 50px !important;
+        min-height: 50px !important;
+        max-height: 50px !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
