@@ -1,21 +1,18 @@
-/* ═══════ NOVA ARCADE spruce (2026-08-14) — gold accents, hero line ═══════
-   Additive polish only. Cyan stays primary; gold is the secondary accent
-   (borrowed from LeadSetter-AI). Nothing here touches ads.css or game logic. */
+/* NOVA ARCADE — spruce theme and responsive game browser */
 
 .nova-tagline {
-  font-family: var(--font-family, 'Assistant', sans-serif);
+  max-width: 90vw;
+  margin: 0.5rem auto 1.2rem;
+  color: #ffd23d;
+  font-family: var(--font-family, "Assistant", sans-serif);
   font-size: 1.05rem;
   letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: #ffd23d;
-  margin: 0.5rem auto 1.2rem;
+  text-align: center;
   text-shadow: 0 0 14px rgba(255, 210, 61, 0.45);
-  max-width: 90vw;
+  text-transform: uppercase;
 }
 
-/* gold underline glow under the title */
 #title::after {
-  content: "";
   display: block;
   width: 92px;
   height: 3px;
@@ -23,380 +20,254 @@
   border-radius: 2px;
   background: linear-gradient(90deg, transparent, #ffd23d, transparent);
   box-shadow: 0 0 16px rgba(255, 210, 61, 0.65);
+  content: "";
 }
 
-/* "NEW" badge utility (add class="gold-badge" to any element) */
-.gold-badge {
+.gold-badge,
+.ver-badge {
   display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  color: #14131a;
+  background: linear-gradient(135deg, #ffd23d, #ffb900);
+  box-shadow: 0 0 12px rgba(255, 210, 61, 0.5);
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #14131a;
-  background: linear-gradient(135deg, #ffd23d, #ffb900);
-  border-radius: 999px;
-  padding: 0.2rem 0.6rem;
-  box-shadow: 0 0 12px rgba(255, 210, 61, 0.5);
 }
 
-/* gold ring on the primary nav cards at hover (shadow/transform untouched) */
 .homepage .card:hover {
   border-color: rgba(255, 210, 61, 0.55);
 }
 
+/* Search controls */
 
-/* ═══════════════════════════════════════════════════════════════
-   GAME LIST THUMBNAILS
-   FIXED: prevents thumbnails from collapsing into flat strips
-   ═══════════════════════════════════════════════════════════════ */
-
-.card-collage {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
-  margin-bottom: 12px;
-  width: 100%;
-  min-width: 0;
-  flex: 0 0 100%;
-  align-self: stretch;
-}
-
-.card-collage img {
-  display: block;
-  width: 100%;
-  min-width: 0;
-  height: 54px;
-  min-height: 54px;
-  max-height: 54px;
-  object-fit: cover;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-
-/*
- * GAME CARDS
- *
- * The explicit height/min-height/flex values below prevent inherited
- * flex/grid rules elsewhere in the site from squeezing the thumbnail.
- */
-#gamesList li {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-
-  height: auto;
-  min-height: 0;
-  min-width: 0;
-  flex: none;
-
-  box-sizing: border-box;
-
-  border-radius: 12px;
-  cursor: pointer;
-
-  transition:
-    transform 0.18s ease,
-    box-shadow 0.18s ease;
-}
-
-
-/*
- * THUMBNAIL
- *
- * Keep these dimensions explicit rather than relying only on
- * aspect-ratio. This prevents the "flat strip" bug.
- */
-#gamesList li .thumb {
-  display: block !important;
-
-  width: 100% !important;
-
-  height: 110px !important;
-  min-height: 110px !important;
-  max-height: 110px !important;
-
-  flex: 0 0 110px !important;
-  flex-shrink: 0 !important;
-
-  box-sizing: border-box;
-
-  object-fit: cover;
-  object-position: center;
-
-  margin: 0 0 8px 0 !important;
-  padding: 0;
-
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-
-  background:
-    linear-gradient(135deg, #18233f, #090e1e);
-
-  box-shadow:
-    0 4px 14px rgba(0, 0, 0, 0.45);
-
-  overflow: hidden;
-
-  transform: translateZ(0);
-  backface-visibility: hidden;
-
-  transition:
-    filter 0.18s ease,
-    border-color 0.18s ease,
-    transform 0.18s ease;
-}
-
-
-/*
- * Optional thumbnail wrappers.
- * These do nothing unless the HTML uses one of these classes,
- * but protect against the same collapse problem if it does.
- */
-#gamesList li .thumb-wrap,
-#gamesList li .thumbnail,
-#gamesList li .game-thumb {
-  display: block;
-  width: 100%;
-  height: 110px;
-  min-height: 110px;
-  flex: 0 0 110px;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-#gamesList li .thumb-wrap img,
-#gamesList li .thumbnail img,
-#gamesList li .game-thumb img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  min-height: 100%;
-  object-fit: cover;
-}
-
-
-/* game name */
-#gamesList li .gname {
-  font-weight: 600;
-}
-
-
-/* hover */
-#gamesList li:hover {
-  transform: scale(1.04);
-  box-shadow: 0 0 18px rgba(0, 240, 255, 0.35);
-}
-
-#gamesList li:hover .thumb {
-  filter: brightness(1.12) saturate(1.15);
-  border-color: rgba(0, 240, 255, 0.55);
-  transform: scale(1.015);
-}
-
-
-/* title overlay on hover (research rule: scrim + title at tile bottom) */
-#gamesList li::after {
-  content: attr(data-name);
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  padding: 14px 10px 8px;
-
-  font-weight: 700;
-  font-size: 0.95rem;
-  text-align: left;
-
-  color: #fff;
-
-  background:
-    linear-gradient(
-      transparent,
-      rgba(0, 0, 0, 0.85)
-    );
-
-  border-radius: 0 0 12px 12px;
-
-  opacity: 0;
-  transform: translateY(4px);
-
-  transition:
-    opacity 0.18s ease,
-    transform 0.18s ease;
-
-  pointer-events: none;
-  z-index: 2;
-}
-
-#gamesList li:hover::after {
-  opacity: 1;
-  transform: none;
-}
-
-
-/* a11y */
-.ver-badge {
-  display: inline-block;
-  font-size: 0.6em;
-  vertical-align: super;
-  color: #14131a;
-  background: linear-gradient(135deg, #ffd23d, #f0a500);
-  border-radius: 8px;
-  padding: 2px 8px;
-  margin-left: 8px;
-  letter-spacing: 0.08em;
-  box-shadow: 0 0 10px rgba(255, 210, 61, 0.5);
-}
-#gamesList li:focus-visible {
-  outline: 2px solid rgba(0, 240, 255, 0.8);
-  outline-offset: 2px;
-}
-
-#gamesList li .star {
-  order: -1;
-  align-self: flex-end;
-}
-
-
-/* ═══ RESTRUCTURE v2 (2026-08-15): floating search + view toggles ═══ */
-
-/* floating search bar (sticks to top of games panel) */
 .games .searchbar {
   position: sticky;
   top: 10px;
   z-index: 40;
+
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
   gap: 10px;
-  padding: 12px 14px;
+
+  width: min(75%, 1400px);
+  box-sizing: border-box;
   margin-bottom: 16px;
+  padding: 12px 14px;
+
+  border: 1px solid rgba(0, 240, 255, 0.25);
   border-radius: 16px;
   background: rgba(12, 16, 32, 0.82);
-  border: 1px solid rgba(0, 240, 255, 0.25);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 18px rgba(0, 240, 255, 0.12);
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.5),
+    0 0 18px rgba(0, 240, 255, 0.12);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
 
 .games .searchbar input#search {
-  flex: 1;
+  flex: 1 1 260px;
   min-width: 160px;
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 10px;
-  color: #eef2ff;
+  box-sizing: border-box;
+  margin: 0;
   padding: 10px 14px;
+
+  border: 1px solid rgba(0, 240, 255, 0.35);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.07);
+  color: #eef2ff;
   font-size: 1rem;
-  outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .games .searchbar input#search:focus {
   border-color: rgba(0, 240, 255, 0.7);
   box-shadow: 0 0 12px rgba(0, 240, 255, 0.25);
+  outline: none;
+}
+
+.games .searchbar select,
+.games .searchbar .randgame,
+.tog {
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.07);
+  color: #eef2ff;
+  cursor: pointer;
 }
 
 .games .searchbar select,
 .games .searchbar .randgame {
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 10px;
-  color: #eef2ff;
+  width: auto;
+  margin: 0;
   padding: 10px 12px;
   font-size: 0.9rem;
-  cursor: pointer;
 }
 
-.games .searchbar .randgame:hover {
+.games .searchbar .randgame:hover,
+.tog:hover {
   border-color: rgba(255, 210, 61, 0.6);
   color: #ffd23d;
 }
 
 .toggles {
   display: inline-flex;
+  flex-wrap: wrap;
   gap: 6px;
   margin-left: auto;
 }
 
 .tog {
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 10px;
-  color: #9aa7c7;
   padding: 9px 12px;
+  color: #9aa7c7;
   font-size: 0.82rem;
   font-weight: 600;
-  cursor: pointer;
-  transition: all 0.18s ease;
-}
-
-.tog:hover {
-  color: #eef2ff;
-  border-color: rgba(0, 240, 255, 0.5);
+  transition: 0.18s ease;
 }
 
 .tog.active {
-  color: #14131a;
-  background: linear-gradient(135deg, #ffd23d, #f0a500);
   border-color: transparent;
+  background: linear-gradient(135deg, #ffd23d, #f0a500);
   box-shadow: 0 0 12px rgba(255, 210, 61, 0.4);
+  color: #14131a;
 }
 
-
-/* ═══════════════════════════════════════════════════════════════
-   GRID VIEW
-   ═══════════════════════════════════════════════════════════════ */
+/* Game grid */
 
 #gamesList {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  grid-auto-rows: max-content;
+  align-items: start;
   gap: 14px;
+
+  width: min(75%, 1400px);
+  height: 60vh;
+  margin: 0;
   padding: 0;
+  overflow-y: auto;
+
   list-style: none;
 }
 
-#gamesList li {
-  background: #121a33;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
+#gamesList > li {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  min-width: 0;
+  min-height: 0;
+  box-sizing: border-box;
   padding: 10px;
   overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  background: #121a33;
+
+  cursor: pointer;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+#gamesList > li:hover {
+  z-index: 1;
+  border-color: rgba(0, 240, 255, 0.45);
+  box-shadow: 0 0 18px rgba(0, 240, 255, 0.28);
+  transform: translateY(-3px);
 }
 
 /*
- * Keep the original 16:9 intent while using explicit dimensions
- * so the browser cannot collapse the image.
- */
-#gamesList li .thumb {
+  Standard markup:
+  <li>
+    <img class="thumb" ...>
+    <span class="gname">Game name</span>
+  </li>
+*/
+#gamesList > li > .thumb {
+  display: block;
+
+  width: 100%;
+  height: auto;
   aspect-ratio: 16 / 9;
+  flex: 0 0 auto;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0 0 8px;
 
-  height: 110px !important;
-  min-height: 110px !important;
-  max-height: 110px !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9px;
+  background: linear-gradient(135deg, #18233f, #090e1e);
 
-  flex: 0 0 110px !important;
+  object-fit: cover;
+  object-position: center;
 }
 
+/*
+  Alternate supported markup:
+  <li>
+    <div class="thumbnail">
+      <img ...>
+    </div>
+  </li>
+*/
+#gamesList > li > .thumb-wrap,
+#gamesList > li > .thumbnail,
+#gamesList > li > .game-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  flex: 0 0 auto;
+  min-width: 0;
+  margin: 0 0 8px;
+  overflow: hidden;
 
-/* star */
-#gamesList li .star {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9px;
+  background: linear-gradient(135deg, #18233f, #090e1e);
+}
+
+#gamesList > li > .thumb-wrap > img,
+#gamesList > li > .thumbnail > img,
+#gamesList > li > .game-thumb > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+#gamesList > li .gname {
+  display: block;
+  min-width: 0;
+  color: #eef2ff;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+#gamesList > li .star {
   position: absolute;
-  top: 8px;
-  right: 10px;
-  order: 0;
-  align-self: auto;
-  z-index: 3;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+
+  color: #fff;
   font-size: 1.1rem;
-  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.85);
 }
 
+#gamesList > li:focus-visible {
+  outline: 2px solid rgba(0, 240, 255, 0.8);
+  outline-offset: 2px;
+}
 
-/* ═══════════════════════════════════════════════════════════════
-   LIST MODE: COMPACT ROWS
-   ═══════════════════════════════════════════════════════════════ */
+/* List view, if your JavaScript adds .list-mode */
 
 #gamesList.list-mode {
   display: flex;
@@ -404,87 +275,64 @@
   gap: 8px;
 }
 
-#gamesList.list-mode li {
-  display: flex;
+#gamesList.list-mode > li {
   flex-direction: row;
   align-items: center;
   gap: 12px;
   padding: 8px 12px;
 }
 
-#gamesList.list-mode .thumb {
-  width: 110px !important;
-  min-width: 110px !important;
-  max-width: 110px !important;
-
-  height: 62px !important;
-  min-height: 62px !important;
-  max-height: 62px !important;
-
-  margin: 0 !important;
-
-  flex: 0 0 110px !important;
-  flex-shrink: 0 !important;
+#gamesList.list-mode > li > .thumb,
+#gamesList.list-mode > li > .thumb-wrap,
+#gamesList.list-mode > li > .thumbnail,
+#gamesList.list-mode > li > .game-thumb {
+  width: 110px;
+  min-width: 110px;
+  height: 62px;
+  aspect-ratio: auto;
+  flex: 0 0 110px;
+  margin: 0;
 }
 
-#gamesList.list-mode .gname {
-  font-size: 0.95rem;
-}
-
-#gamesList.list-mode .star {
+#gamesList.list-mode > li .star {
   position: static;
-  order: 3;
   margin-left: auto;
 }
 
-#gamesList.list-mode li::after {
+/* Thumbnails toggle */
+
+#gamesList.no-thumbs > li > .thumb,
+#gamesList.no-thumbs > li > .thumb-wrap,
+#gamesList.no-thumbs > li > .thumbnail,
+#gamesList.no-thumbs > li > .game-thumb {
   display: none;
 }
 
-
-/* ═══════════════════════════════════════════════════════════════
-   THUMBNAILS OFF
-   ═══════════════════════════════════════════════════════════════ */
-
-#gamesList.no-thumbs .thumb {
-  display: none !important;
-}
-
-#gamesList.no-thumbs li {
+#gamesList.no-thumbs > li {
   min-height: 52px;
   justify-content: center;
 }
 
-#gamesList.no-thumbs .gname {
-  font-size: 1.05rem;
-}
+/* Floaty mode */
 
-
-/* ═══════════════════════════════════════════════════════════════
-   FLOATY MODE: LeadSetter floaties vibe — slow bob + sway, glassy
-   ═══════════════════════════════════════════════════════════════ */
-
-#gamesList.floaty-mode li {
+#gamesList.floaty-mode > li {
   animation: novaFloat 7s ease-in-out infinite;
+  border-color: rgba(255, 210, 61, 0.18);
   background: rgba(18, 26, 51, 0.72);
   backdrop-filter: blur(6px);
-  border-color: rgba(255, 210, 61, 0.18);
 }
 
-#gamesList.floaty-mode li:nth-child(3n+1) {
-  animation-delay: 0s;
-}
-
-#gamesList.floaty-mode li:nth-child(3n+2) {
+#gamesList.floaty-mode > li:nth-child(3n + 2) {
   animation-delay: 1.2s;
 }
 
-#gamesList.floaty-mode li:nth-child(3n) {
+#gamesList.floaty-mode > li:nth-child(3n) {
   animation-delay: 2.4s;
 }
 
 @keyframes novaFloat {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) rotate(0deg);
   }
 
@@ -493,24 +341,40 @@
   }
 }
 
-
-/* ═══════════════════════════════════════════════════════════════
-   MOBILE
-   ═══════════════════════════════════════════════════════════════ */
+/* Responsive */
 
 @media (max-width: 640px) {
-  .card-collage img {
-    height: 22px;
-    min-height: 22px;
-    max-height: 22px;
+  .games .searchbar,
+  #gamesList {
+    width: 92%;
   }
 
-  #gamesList li .thumb {
-    height: 90px !important;
-    min-height: 90px !important;
-    max-height: 90px !important;
+  .games .searchbar {
+    top: 6px;
+  }
 
-    flex: 0 0 90px !important;
-    flex-shrink: 0 !important;
+  .toggles {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .tog {
+    flex: 1 1 auto;
+  }
+
+  #gamesList {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    height: 55vh;
+  }
+
+  #gamesList > li {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 390px) {
+  #gamesList {
+    grid-template-columns: 1fr;
   }
 }
