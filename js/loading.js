@@ -25,6 +25,7 @@ let themes = json['themes'];
 let config = json['config'];
 
 let gamesList = $('#gamesList');
+let gIdx = 0;
 for (game in games) {
     const gpath = games[game]['path'].replace(/\//g, '_');
     gamesList.append(
@@ -32,6 +33,12 @@ for (game in games) {
             games[game]['aliases'] ? 'aliases="' + games[game]['aliases'].join(',') + '"' : ''
         }><img class="thumb" width="198" height="120" src="games/thumbnails/${gpath}.jpg?v=2" alt="${game}"> <span class="gname">${game}</span> <span class="star">★</span> </li>`,
     );
+    gIdx++;
+    if (gIdx % 12 === 0) {
+        gamesList.append(
+            `<li class="ad-infeed" data-ad="1"><div class="ad-infeed-slot" id="ad-infeed-${gIdx / 12}">AD — SPONSOR SLOT</div></li>`,
+        );
+    }
 }
 
 let starredGamesList = JSON.parse(localStorage.getItem('starredGamesList')) || [];

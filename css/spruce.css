@@ -378,3 +378,60 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ============ AD SLOTS (high-RPM placements, gameneptune/duck.quackprep style) ============ */
+.ad-sidebar {
+  display: none;
+  position: fixed;
+  top: 96px;
+  width: 160px;
+  min-height: 600px;
+  z-index: 5;
+}
+.ad-left  { left: 14px; }
+.ad-right { right: 14px; }
+.ad-sidebar .ad-inner {
+  background: rgba(18, 26, 51, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #5a6a96;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+}
+@media (min-width: 1500px) {
+  .ad-sidebar { display: block; }
+}
+/* top leaderboard + mid divider slots: centered, framed, subtle */
+#ad-top, #ad-mid {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 6px auto;
+  max-width: 780px;
+}
+/* in-feed ad card inside the game grid (every 12th tile) */
+#gamesList li.ad-infeed {
+  list-style: none;
+  min-height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px dashed rgba(255, 255, 255, 0.14);
+  background: rgba(18, 26, 51, 0.5);
+  color: #5a6a96;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+/* float slot (kept from original, subtle) */
+.ad-float { z-index: 6; }
