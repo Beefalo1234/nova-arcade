@@ -683,6 +683,21 @@
         "neon"
       ],
       "categories": []
+    },
+    "Snake": {
+      "path": "snake",
+      "aliases": ["snake-game", "nokia-snake"],
+      "categories": ["classic", "arcade"]
+    },
+    "Tetris": {
+      "path": "tetris",
+      "aliases": ["tetris-game", "blocks"],
+      "categories": ["classic", "puzzle"]
+    },
+    "Memory": {
+      "path": "memory",
+      "aliases": ["memory-game", "concentration", "card-match"],
+      "categories": ["puzzle"]
     }
   },
   "themes": {},
