@@ -708,6 +708,16 @@
       "path": "lights-out",
       "aliases": ["lights-out-puzzle"],
       "categories": ["classic", "puzzle"]
+    },
+    "Tower of Hanoi": {
+      "path": "tower-of-hanoi",
+      "aliases": ["hanoi", "towers-of-hanoi"],
+      "categories": ["puzzle", "logic"]
+    },
+    "Jigsaw Puzzle": {
+      "path": "jigsaw_game",
+      "aliases": ["jigsaw", "puzzle-game"],
+      "categories": ["puzzle"]
     }
   },
   "themes": {},
