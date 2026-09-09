@@ -698,6 +698,16 @@
       "path": "memory",
       "aliases": ["memory-game", "concentration", "card-match"],
       "categories": ["puzzle"]
+    },
+    "Frogger": {
+      "path": "frogger",
+      "aliases": ["frogger-game", "frogger-arcade"],
+      "categories": ["classic", "arcade"]
+    },
+    "Lights Out": {
+      "path": "lights-out",
+      "aliases": ["lights-out-puzzle"],
+      "categories": ["classic", "puzzle"]
     }
   },
   "themes": {},
