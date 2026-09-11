@@ -728,6 +728,16 @@
       "path": "un-tangle",
       "aliases": ["untangle", "planarity", "node puzzle"],
       "categories": ["puzzle", "logic"]
+    },
+    "Bingo": {
+      "path": "bingo-caller",
+      "aliases": ["bingo caller", "lottery", "bingo game"],
+      "categories": ["classic", "board"]
+    },
+    "Roulette": {
+      "path": "roulette-wheel",
+      "aliases": ["roulette wheel", "casino"],
+      "categories": ["classic", "casino"]
     }
   },
   "themes": {},
