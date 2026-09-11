@@ -718,6 +718,16 @@
       "path": "jigsaw_game",
       "aliases": ["jigsaw", "puzzle-game"],
       "categories": ["puzzle"]
+    },
+    "Hand Cricket": {
+      "path": "hand-cricket",
+      "aliases": ["cricket", "sports", "hand cricket game"],
+      "categories": ["sports", "classic"]
+    },
+    "Un-Tangle": {
+      "path": "un-tangle",
+      "aliases": ["untangle", "planarity", "node puzzle"],
+      "categories": ["puzzle", "logic"]
     }
   },
   "themes": {},
