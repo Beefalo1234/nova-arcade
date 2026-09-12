@@ -143,9 +143,16 @@ def gen(name, path):
 def main():
     src = (BASE / "js" / "config.js").read_text(encoding="utf-8")
     games = json.loads(src[src.index("{") : src.rindex("}") + 1])["games"]
+    only_missing = "--missing" in sys.argv
+    made = skipped = 0
     for name, g in games.items():
+        dest = OUT / f"{slug(g['path'])}.jpg"
+        if only_missing and dest.exists():
+            skipped += 1
+            continue
         gen(name, g["path"])
-    print(f"generated {len(games)} v2 thumbnails -> games/thumbnails/")
+        made += 1
+    print(f"generated {made} v2 thumbnails -> games/thumbnails/ (skipped {skipped} existing)")
 
 
 if __name__ == "__main__":
