@@ -738,6 +738,16 @@
       "path": "roulette-wheel",
       "aliases": ["roulette wheel", "casino"],
       "categories": ["classic", "casino"]
+    },
+    "Bottle Flip": {
+      "path": "bottle-flip-challenge",
+      "aliases": ["bottleflip", "bottle flip game"],
+      "categories": ["arcade", "classic"]
+    },
+    "Gravity Golf": {
+      "path": "gravity-golf",
+      "aliases": ["golf", "space golf"],
+      "categories": ["sports", "arcade"]
     }
   },
   "themes": {},
