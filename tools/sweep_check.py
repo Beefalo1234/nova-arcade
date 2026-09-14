@@ -8,7 +8,7 @@ cfg = json.loads(m.group(1))["games"]
 print("configured games:", len(cfg))
 
 # (a) grep for new display names
-for name in ("Bottle Flip", "Gravity Golf"):
+for name in ("Plinko Drop", "Slot Spinner"):
     hit = name in js
     print(f"[a] grep js/config.js for '{name}': {'FOUND' if hit else 'MISSING'}")
     assert hit, f"grep failed for {name}"
@@ -31,7 +31,7 @@ def relative_refs(fp):
         out.update(re.findall(pat, t))
     return out
 
-for slug in ("bottle-flip-challenge", "gravity-golf"):
+for slug in ("plinko_drop", "slot-spinner"):
     d = os.path.join(ROOT, "games", slug)
     bad = []
     for f in os.listdir(d):

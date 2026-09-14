@@ -748,6 +748,16 @@
       "path": "gravity-golf",
       "aliases": ["golf", "space golf"],
       "categories": ["sports", "arcade"]
+    },
+    "Plinko Drop": {
+      "path": "plinko_drop",
+      "aliases": ["plinko", "plinko drop", "ball drop"],
+      "categories": ["arcade", "classic"]
+    },
+    "Slot Spinner": {
+      "path": "slot-spinner",
+      "aliases": ["slots", "slot machine", "slot"],
+      "categories": ["casino", "classic"]
     }
   },
   "themes": {},
