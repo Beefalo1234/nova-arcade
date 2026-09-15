@@ -758,6 +758,16 @@
       "path": "slot-spinner",
       "aliases": ["slots", "slot machine", "slot"],
       "categories": ["casino", "classic"]
+    },
+    "City Builder": {
+      "path": "city-builder",
+      "aliases": ["city", "simulation"],
+      "categories": ["simulation", "building"]
+    },
+    "Trivia Master": {
+      "path": "trivia-master",
+      "aliases": ["trivia", "quiz", "questions"],
+      "categories": ["trivia", "quiz"]
     }
   },
   "themes": {},
