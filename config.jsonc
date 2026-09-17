@@ -778,6 +778,16 @@
       "path": "burger-builder",
       "aliases": ["burger game", "burger maker", "cooking"],
       "categories": ["cooking", "arcade"]
+    },
+    "Odd One Out": {
+      "path": "odd-one-out",
+      "aliases": ["odd one", "find the odd one"],
+      "categories": ["puzzle", "brain"]
+    },
+    "The Floor is Lava": {
+      "path": "the-floor-is-lava",
+      "aliases": ["floor is lava", "lava floor"],
+      "categories": ["arcade", "casual"]
     }
   },
   "themes": {},
