@@ -768,6 +768,16 @@
       "path": "trivia-master",
       "aliases": ["trivia", "quiz", "questions"],
       "categories": ["trivia", "quiz"]
+    },
+    "Piano Tiles": {
+      "path": "piano_game",
+      "aliases": ["piano", "piano tiles game", "tap tiles"],
+      "categories": ["music", "arcade"]
+    },
+    "Burger Builder": {
+      "path": "burger-builder",
+      "aliases": ["burger game", "burger maker", "cooking"],
+      "categories": ["cooking", "arcade"]
     }
   },
   "themes": {},
