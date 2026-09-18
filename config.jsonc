@@ -788,6 +788,16 @@
       "path": "the-floor-is-lava",
       "aliases": ["floor is lava", "lava floor"],
       "categories": ["arcade", "casual"]
+    },
+    "Mini Tank Battle": {
+      "path": "mini-tank-battle",
+      "aliases": ["tanks", "battle city"],
+      "categories": ["arcade", "classic"]
+    },
+    "Ice Slide": {
+      "path": "ice-slide",
+      "aliases": ["ice sliding", "ice puzzle"],
+      "categories": ["puzzle", "logic"]
     }
   },
   "themes": {},
