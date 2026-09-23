@@ -798,6 +798,16 @@
       "path": "ice-slide",
       "aliases": ["ice sliding", "ice puzzle"],
       "categories": ["puzzle", "logic"]
+    },
+    "Race Track": {
+      "path": "race-track",
+      "aliases": ["racing", "race track game", "car racing"],
+      "categories": ["arcade", "sports"]
+    },
+    "Tug of War": {
+      "path": "tug-of-war",
+      "aliases": ["tug of war game", "rope pull", "strength game"],
+      "categories": ["classic", "arcade"]
     }
   },
   "themes": {},
