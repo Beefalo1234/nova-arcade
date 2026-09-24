@@ -818,6 +818,16 @@
       "path": "gem-swap",
       "aliases": ["match3", "match-3", "bejeweled"],
       "categories": ["puzzle", "casual"]
+    },
+    "Knife Thrower": {
+      "path": "knife-thrower",
+      "aliases": ["knife hit", "knife game", "throwing"],
+      "categories": ["arcade", "casual"]
+    },
+    "Words of Wonders": {
+      "path": "words-of-wonders",
+      "aliases": ["word puzzle", "wordscapes", "word search", "anagram"],
+      "categories": ["word", "puzzle"]
     }
   },
   "themes": {},
