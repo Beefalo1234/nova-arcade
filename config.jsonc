@@ -808,6 +808,16 @@
       "path": "tug-of-war",
       "aliases": ["tug of war game", "rope pull", "strength game"],
       "categories": ["classic", "arcade"]
+    },
+    "Maze Master": {
+      "path": "maze-master",
+      "aliases": ["maze", "lab"],
+      "categories": ["puzzle", "classic"]
+    },
+    "Gem Swap": {
+      "path": "gem-swap",
+      "aliases": ["match3", "match-3", "bejeweled"],
+      "categories": ["puzzle", "casual"]
     }
   },
   "themes": {},
