@@ -828,6 +828,16 @@
       "path": "words-of-wonders",
       "aliases": ["word puzzle", "wordscapes", "word search", "anagram"],
       "categories": ["word", "puzzle"]
+    },
+    "Farm Life": {
+      "path": "farm-life",
+      "aliases": ["farming", "farm simulator"],
+      "categories": ["simulation", "casual"]
+    },
+    "Potion Mixer": {
+      "path": "potion-mixer",
+      "aliases": ["alchemy", "potion game"],
+      "categories": ["puzzle", "casual"]
     }
   },
   "themes": {},
