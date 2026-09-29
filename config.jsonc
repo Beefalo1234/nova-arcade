@@ -838,6 +838,16 @@
       "path": "potion-mixer",
       "aliases": ["alchemy", "potion game"],
       "categories": ["puzzle", "casual"]
+    },
+    "Number Cruncher": {
+      "path": "number-cruncher",
+      "aliases": ["math", "arithmetic", "mental math", "numbers"],
+      "categories": ["brain", "math"]
+    },
+    "Guitar Simulator": {
+      "path": "guitar-simulator",
+      "aliases": ["guitar", "music", "instrument", "chords"],
+      "categories": ["music", "casual"]
     }
   },
   "themes": {},
