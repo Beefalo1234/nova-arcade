@@ -848,6 +848,16 @@
       "path": "guitar-simulator",
       "aliases": ["guitar", "music", "instrument", "chords"],
       "categories": ["music", "casual"]
+    },
+    "Fishing Frenzy": {
+      "path": "fishing-frenzy",
+      "aliases": ["fishing", "fish catcher", "cast"],
+      "categories": ["casual", "arcade"]
+    },
+    "Precision Archer": {
+      "path": "precision-archer",
+      "aliases": ["archery", "bow and arrow", "target practice"],
+      "categories": ["arcade", "sports"]
     }
   },
   "themes": {},
