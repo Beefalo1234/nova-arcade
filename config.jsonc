@@ -868,6 +868,16 @@
       "path": "pipe-twister",
       "aliases": ["pipes", "pipe puzzle", "flow", "plumber", "plumbing"],
       "categories": ["puzzle", "classic"]
+    },
+    "Geography Explorer": {
+      "path": "geography-explorer",
+      "aliases": ["geography", "map", "countries", "world map"],
+      "categories": ["trivia", "quiz"]
+    },
+    "Spelling Champion": {
+      "path": "spelling-champion",
+      "aliases": ["spelling", "spelling bee", "words"],
+      "categories": ["word", "brain"]
     }
   },
   "themes": {},
