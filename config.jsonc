@@ -858,6 +858,16 @@
       "path": "precision-archer",
       "aliases": ["archery", "bow and arrow", "target practice"],
       "categories": ["arcade", "sports"]
+    },
+    "Bridge Puzzle": {
+      "path": "bridge-puzzle",
+      "aliases": ["hashi", "island bridge", "connect islands", "bridge building"],
+      "categories": ["puzzle", "brain"]
+    },
+    "Pipe Twister": {
+      "path": "pipe-twister",
+      "aliases": ["pipes", "pipe puzzle", "flow", "plumber", "plumbing"],
+      "categories": ["puzzle", "classic"]
     }
   },
   "themes": {},
