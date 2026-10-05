@@ -878,6 +878,16 @@
       "path": "spelling-champion",
       "aliases": ["spelling", "spelling bee", "words"],
       "categories": ["word", "brain"]
+    },
+    "Color Rush": {
+      "path": "color-rush",
+      "aliases": ["colour rush", "catch color"],
+      "categories": ["arcade", "casual"]
+    },
+    "Pet Care": {
+      "path": "pet-care",
+      "aliases": ["virtual pet", "tamagotchi"],
+      "categories": ["simulation", "casual"]
     }
   },
   "themes": {},
