@@ -888,6 +888,16 @@
       "path": "pet-care",
       "aliases": ["virtual pet", "tamagotchi"],
       "categories": ["simulation", "casual"]
+    },
+    "Shooting Range": {
+      "path": "shooting-range",
+      "aliases": ["shooting", "gun range", "target practice"],
+      "categories": ["arcade", "sports"]
+    },
+    "Treasure Seeker": {
+      "path": "treasure-seeker",
+      "aliases": ["treasure", "dig", "mining"],
+      "categories": ["puzzle", "brain"]
     }
   },
   "themes": {},
