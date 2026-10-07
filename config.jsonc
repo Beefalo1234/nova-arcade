@@ -898,6 +898,16 @@
       "path": "treasure-seeker",
       "aliases": ["treasure", "dig", "mining"],
       "categories": ["puzzle", "brain"]
+    },
+    "Dance Floor": {
+      "path": "dance-floor",
+      "aliases": ["ddr", "rhythm", "dance game"],
+      "categories": ["music", "arcade", "casual"]
+    },
+    "Word Chain Puzzle": {
+      "path": "word-chain-puzzle",
+      "aliases": ["word chain", "wordchain"],
+      "categories": ["word", "puzzle", "brain"]
     }
   },
   "themes": {},
